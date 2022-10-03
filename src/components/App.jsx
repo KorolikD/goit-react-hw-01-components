@@ -1,6 +1,8 @@
+import { user, data, friends, transactions } from 'data';
 import { Profile } from 'components/Profile/Profile';
 import { Statistics } from 'components/Statistics/Statistics';
-import { user, data, friends, transactions } from 'data';
+import { FriendList } from 'components/FriendList/FriendList';
+import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
 
 export const App = () => (
   <>
@@ -15,5 +17,7 @@ export const App = () => (
       likes={user.stats.likes}
     />
     <Statistics title="Upload stats" stats={data} />
+    <FriendList friends={friends} />;
+    <TransactionHistory items={transactions} />;
   </>
 );

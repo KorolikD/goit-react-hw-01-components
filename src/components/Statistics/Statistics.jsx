@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { StatItem } from 'components/Statistics/StatItem';
+import { StatItem } from './StatItem';
 
 export const Statistics = ({ title, stats }) => {
   return (
@@ -19,5 +19,7 @@ export const Statistics = ({ title, stats }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({ id: PropTypes.string.isRequired })
+  ),
 };
