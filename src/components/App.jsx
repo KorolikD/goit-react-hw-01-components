@@ -1,4 +1,4 @@
-import { user, data, friends, transactions } from 'data';
+import { data, friends, transactions, user } from 'data';
 import { Profile } from 'components/Profile/Profile';
 import { Statistics } from 'components/Statistics/Statistics';
 import { FriendList } from 'components/FriendList/FriendList';
@@ -12,9 +12,6 @@ export const App = () => (
       tag={user.tag}
       location={user.location}
       stats={user.stats}
-      followers={user.stats.followers}
-      views={user.stats.views}
-      likes={user.stats.likes}
     />
     <Statistics title="Upload stats" stats={data} />
     <FriendList friends={friends} />;
